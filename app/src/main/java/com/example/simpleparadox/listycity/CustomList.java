@@ -56,13 +56,17 @@ public class CustomList extends ArrayAdapter<City> {
         return;
     }
     public boolean hasCity(){
-        return false;
+        if(cities.size() >= 1)
+            return true;
+        else
+            return false;
     }
     public void deleteCity(City city){
+        cities.remove(city);
         return;
     }
 
     public int countCity(){
-        return 0;
+        return cities.size();
     }
 }
